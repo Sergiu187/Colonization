@@ -1,0 +1,71 @@
+:root {
+  --mars-color: #cdbc9e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: courier, monospace;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(36, 36, 36, 0.816);
+  position: relative;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  display: block;
+  list-style: none;
+  color: var(--mars-color);
+  font-weight: bold;
+  margin: 0 1rem;
+}
+
+.top {
+  position: absolute;
+  list-style: none;
+  color: var(--mars-color);
+  font-weight: bold;
+  margin: 0 1rem;
+}
+
+a:visited {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  text-decoration: none;
+  position: relative;
+  text-transform: uppercase;
+  color: var(--mars-color);
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: var(--mars-color);
+  left: 0;
+  bottom: 0.01em;
+  border-radius: 0.1rem;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
